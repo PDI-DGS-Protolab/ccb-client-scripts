@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+<div class="starter-template">
+<div class="container">
+
+<h1>Sample CCB Payment Form</h1>
+<p>Thanks {{customer_id}} for purchasing via CCB</p>
+<p>Order : <strong>{{reference}}</strong></p>
+<p>Amount : <strong>{{amount}} {{currency}}</strong></p>
+</p>
+
+<form name="payment_form" action="{{base_endpoint}}/payments/redirect" method="post">
+    <input type="hidden" type="text" name="amount" value="{{amount}}">
+    <input type="hidden" type="text" name="currency" value="{{currency}}">
+    <input type="hidden" type="text" name="reference" value="{{reference}}">
+    <input type="hidden" type="text" name="customerId" value="{{customer_id}}">
+    <input type="hidden" type="text" name="merchantAccount" value="{{merchant_account}}">
+    <input type="hidden" type="text" name="description" value="">
+	<input type="hidden" type="text" name="merchantTimestamp" value="{{timestamp}}">
+	<input type="hidden" type="text" name="signature" value="{{signature}}" >              
+    <button class="btn btn-lg btn-primary" >Pay now</button>
+</form>
+
+</div>
+</div>
+</body>
+
+</html>
