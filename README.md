@@ -3,11 +3,11 @@ ccb-client-scripts
 
 Simple python scripts to invoke CCB API
 
-# First payment
+## First payment
 
    $ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
 
-# Recurring payment
+## Recurring payment
 
 $ python ./recurringPayment.py 100 EUR tester@tid.es
 
@@ -17,7 +17,7 @@ REQUEST : POST https://www.ccb-pre.telefonica.com/payments
 RESPONSE : 201
 {"resultCode":"Authorised","reference":"TST_423766"}
 
-# Modifying a payment
+## Modifying a payment
 
 $ python ./modifyPayment.py refund TST_423766
 
