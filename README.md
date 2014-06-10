@@ -8,10 +8,11 @@ The scripts have the following dependencies jinja 2 for templating on first paym
 You can install them as follows using pip:
 
 pip install jinja2
+
 pip install requests
 
 
-## Samples 
+## Usage 
 
 Simple python scripts to invoke CCB API
 
