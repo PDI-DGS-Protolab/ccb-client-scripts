@@ -3,7 +3,7 @@ ccb-client-scripts
 
 ## Dependencies
 
-The scripts have the following dependencies jinja 2 for templating on first payment and request to perform the API calls.
+The scripts have the following dependencies [jinja 2](http://jinja.pocoo.org/docs/) for templating on first payment and [requests](http://docs.python-requests.org/en/latest/) to perform the API calls.
 
 You can install them as follows using pip:
 
@@ -46,7 +46,7 @@ RESPONSE : 201
 {"resultCode":"Authorised","reference":"TST_423766"}
 ```
 
-### Modifying a payment
+### Modify payment
 
 Captures or refunds an existing payment.
 
