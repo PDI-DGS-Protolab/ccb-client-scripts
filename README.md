@@ -14,7 +14,9 @@ pip install requests
 
 ## Configuration
 
-You can set up your credencials (apikey & salt) and endpoint environment.
+You can set up your credencials (apikey & salt) and endpoint environment editing the merchant.cfg file.
+
+You do not need to add any additional setting to the scripts.
 
 
 ## Usage 
