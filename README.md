@@ -12,6 +12,11 @@ pip install jinja2
 pip install requests
 
 
+## Configuration
+
+You can set up your credencials (apikey & salt) and endpoint environment.
+
+
 ## Usage 
 
 Simple python scripts to invoke CCB API
