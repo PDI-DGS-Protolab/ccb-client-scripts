@@ -7,9 +7,8 @@ The scripts have the following dependencies jinja 2 for templating on first paym
 
 You can install them as follows using pip:
 
-pip install jinja2
-
-pip install requests
+`pip install jinja2`
+`pip install requests
 
 
 ## Configuration
@@ -25,10 +24,11 @@ Simple python scripts to invoke CCB API
 
 ### First payment
 
-$ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
+`$ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
 
 ### Recurring payment
 
+`
 $ python ./recurringPayment.py 100 EUR tester@tid.es
 
 REQUEST : POST https://www.ccb-pre.telefonica.com/payments
@@ -36,6 +36,7 @@ REQUEST : POST https://www.ccb-pre.telefonica.com/payments
 
 RESPONSE : 201
 {"resultCode":"Authorised","reference":"TST_423766"}
+`
 
 ### Modifying a payment
 
