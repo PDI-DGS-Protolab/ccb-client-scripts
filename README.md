@@ -5,7 +5,7 @@ ccb-client-scripts
 
 The scripts have the following dependencies [Jinja2](http://jinja.pocoo.org/docs/) for templating on first payment and [Requests](http://docs.python-requests.org/en/latest/) to perform the API calls.
 
-You can install them as follows using pip:
+You can install them as follows using [pip](https://pip.pypa.io):
 
 ```
 pip install jinja2
@@ -14,7 +14,7 @@ pip install requests
 
 ## Configuration
 
-You can set up your credencials (apikey & salt) and endpoint environment editing the merchant.cfg file.
+You can set up your credentials (apikey & salt) and endpoint environment editing the [merchant.cfg](https://github.com/PDI-DGS-Protolab/ccb-client-scripts/blob/master/merchant.cfg) file.
 
 You do not need to add any additional setting to the scripts.
 
