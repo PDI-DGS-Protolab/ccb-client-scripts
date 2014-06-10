@@ -1,13 +1,25 @@
 ccb-client-scripts
 ==================
 
+## Dependencies
+
+The scripts have the following dependencies jinja 2 for templating on first payment and request to perform the API calls.
+
+You can install them as follows using pip:
+
+pip install jinja2
+pip install requests
+
+
+## Samples 
+
 Simple python scripts to invoke CCB API
 
-## First payment
+### First payment
 
-   $ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
+$ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
 
-## Recurring payment
+### Recurring payment
 
 $ python ./recurringPayment.py 100 EUR tester@tid.es
 
@@ -17,7 +29,7 @@ REQUEST : POST https://www.ccb-pre.telefonica.com/payments
 RESPONSE : 201
 {"resultCode":"Authorised","reference":"TST_423766"}
 
-## Modifying a payment
+### Modifying a payment
 
 $ python ./modifyPayment.py refund TST_423766
 
