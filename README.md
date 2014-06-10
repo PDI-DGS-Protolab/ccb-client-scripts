@@ -3,7 +3,7 @@ ccb-client-scripts
 
 ## Dependencies
 
-The scripts have the following dependencies [jinja 2](http://jinja.pocoo.org/docs/) for templating on first payment and [requests](http://docs.python-requests.org/en/latest/) to perform the API calls.
+The scripts have the following dependencies [Jinja2](http://jinja.pocoo.org/docs/) for templating on first payment and [Requests](http://docs.python-requests.org/en/latest/) to perform the API calls.
 
 You can install them as follows using pip:
 
