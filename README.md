@@ -29,8 +29,19 @@ In order to complete the first payment, is required to use the resulting html in
 
 
 ```
-$ python ./firstPayment.py 100 EUR tester@tid.es >prueba.html
+$ python ./firstPayment.py 100 EUR tester@tid.es >first_payment.html
 ```
+
+The payment id wil be self generated, you can get check it on the generated html. 
+
+On the following example the payment id is TST_796281.
+
+```
+$ grep reference first_payment.html
+    <input type="hidden" type="text" name="reference" value="TST_796281">
+```
+
+Please note that the email provided will be shopper identifier for recurring payments.   
 
 ### Recurring payment
 
@@ -58,7 +69,6 @@ REQUEST : GET https://www.ccb-pre.telefonica.com/payments/TST_423766
 RESPONSE : 200
 {"_id":"TST_423766","amount":100,"currency":"EUR","customerId":"538729107515b24afc4573d4","merchantId":"52e7cd3c9e29efe120c6ca63","merchantTimestamp":"2009-06-20T17:10:55.000Z","paymentMethod":"","status":"Authorised","statusHistory":[{"status":"Authorised","timestamp":"2014-06-09T15:09:41.062Z"},{"status":"Initiated","timestamp":"2014-06-09T15:09:40.250Z"}],"timestamp":"2014-06-09T15:09:40.249Z"}
 ```
-
 
 ### Modify payment
 
