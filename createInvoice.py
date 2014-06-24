@@ -1,11 +1,10 @@
 import sys
-import operator
-import time
-import random
 import datetime
-import requests
 import json
 import ConfigParser
+
+import requests
+
 
 
 # merchant and environment configuration

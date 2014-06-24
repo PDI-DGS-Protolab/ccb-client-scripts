@@ -1,8 +1,8 @@
 import sys
-import operator
-import requests
-import json
 import ConfigParser
+
+import requests
+
 
 
 # merchant and environment configuration
@@ -28,8 +28,8 @@ def generate_request(id):
 def main():   
 
     if len(sys.argv) != 2:
-         print 'usage: ./getPayments.py id'
-         sys.exit(1)
+        print 'usage: ./getPayments.py id'
+        sys.exit(1)
 
     id = sys.argv[1] 
      

@@ -1,14 +1,13 @@
 import sys
-import operator
-import time
 import random
 import datetime
-
 import base64
 import hmac
 import hashlib
 import ConfigParser
+
 from jinja2 import Environment, FileSystemLoader
+
 
 
 # merchant and environment configuration
