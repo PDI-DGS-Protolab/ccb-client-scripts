@@ -46,6 +46,20 @@ RESPONSE : 201
 {"resultCode":"Authorised","reference":"TST_423766"}
 ```
 
+### Get payment
+
+Gets information about existing payment.
+
+```
+$ python ./getPayment.py TST_423766
+
+REQUEST : GET https://www.ccb-pre.telefonica.com/payments/TST_423766
+
+RESPONSE : 200
+{"_id":"TST_423766","amount":100,"currency":"EUR","customerId":"538729107515b24afc4573d4","merchantId":"52e7cd3c9e29efe120c6ca63","merchantTimestamp":"2009-06-20T17:10:55.000Z","paymentMethod":"","status":"Authorised","statusHistory":[{"status":"Authorised","timestamp":"2014-06-09T15:09:41.062Z"},{"status":"Initiated","timestamp":"2014-06-09T15:09:40.250Z"}],"timestamp":"2014-06-09T15:09:40.249Z"}
+```
+
+
 ### Modify payment
 
 Captures or refunds an existing payment.
