@@ -97,3 +97,17 @@ REQUEST : POST https://www.ccb-pre.telefonica.com/customers/joser@tid.es/invoice
 RESPONSE : 201
 {"number":"TST-P-23-0000000008","customerId":"tester@tid.es","totalGross":15000,"toDate":"2023-06-20T10:42:29.000Z","totalTaxes":0,"fromDate":"2023-06-20T10:42:29.000Z","totalNet":15000,"currency":"EUR","type":"purchase","merchantBillingInfo":{"countryCode":"UK","zipCode":"38383","state":"unknown","city":"Slough,  SL1 4DX","address":"260 Bath Road","vatNumber":"dummy","name":"Telefรณnica Digital UK"},"customerBillingInfo":{"countryCode":"ES","zipCode":"28001","state":"Madrid","city":"Madrid","address":"Calle Mayor, 22","vatNumber":"235456-AV","name":"John Smith"},"taxDetails":[{"rate":0,"taxName":"IVA","subtotalNet":0,"id":"53a7e875ded829582b3fecb6"}],"items":[{"amountNet":15000,"name":"product #1","rate":0,"units":1,"amountGross":15000,"unitPrice":15000,"taxName":"IVA","id":"53a7e875ded829582b3fecb5"}],"sent":false,"status":"Pending","issueDate":"2023-06-20T10:42:29.000Z","id":"53a7e875ded829582b3fecb4"}
 ```
+
+You can also create a more complex invoice with several items with same item price and taxes.
+
+On the following example the invoice will have 3 items, each item will be 3 EUR and a 21% of VAT:
+
+```
+python ./createComplexInvoice.py 3 300 EUR joser@tid.es 2100
+
+REQUEST : POST http://localhost:8080/customers/joser@tid.es/invoices
+{"totalGross": 1089, "toDate": "2014/06/24 11:51:58", "totalTaxes": 189, "fromDate": "2014/06/24 11:51:58", "taxDetails": [{"rate": 2100, "taxName": "IVA", "subtotalNet": 900}], "totalNet": 900, "issueDate": "2014/06/24 11:51:58", "currency": "EUR", "type": "purchase", "items": [{"amountNet": 300, "name": "product #0", "rate": 2100, "units": 1, "amountGross": 363, "unitPrice": 300, "taxName": "IVA"}, {"amountNet": 300, "name": "product #1", "rate": 2100, "units": 1, "amountGross": 363, "unitPrice": 300, "taxName": "IVA"}, {"amountNet": 300, "name": "product #2", "rate": 2100, "units": 1, "amountGross": 363, "unitPrice": 300, "taxName": "IVA"}]}
+
+RESPONSE : 201
+{"number":"TST-P-24-0000000022","customerId":"joser@tid.es","totalGross":1089,"toDate":"2024-06-20T11:51:58.000Z","totalTaxes":189,"fromDate":"2024-06-20T11:51:58.000Z","totalNet":900,"currency":"EUR","type":"purchase","merchantBillingInfo":{"countryCode":"UK","zipCode":"38383","state":"unknown","city":"Slough,  SL1 4DX","address":"260 Bath Road","vatNumber":"dummy","name":"Telefรณnica Digital UK"},"customerBillingInfo":{"countryCode":"ES","zipCode":"28001","state":"Madrid","city":"Madrid","address":"Calle Mayor, 22","vatNumber":"235456-AV","name":"John Smith"},"taxDetails":[{"rate":2100,"taxName":"IVA","subtotalNet":900,"id":"53a94a3eded829582b3fecfa"}],"items":[{"amountNet":300,"name":"product #0","rate":2100,"units":1,"amountGross":363,"unitPrice":300,"taxName":"IVA","id":"53a94a3eded829582b3fecf9"},{"amountNet":300,"name":"product #1","rate":2100,"units":1,"amountGross":363,"unitPrice":300,"taxName":"IVA","id":"53a94a3eded829582b3fecf8"},{"amountNet":300,"name":"product #2","rate":2100,"units":1,"amountGross":363,"unitPrice":300,"taxName":"IVA","id":"53a94a3eded829582b3fecf7"}],"sent":false,"status":"Pending","issueDate":"2024-06-20T11:51:58.000Z","id":"53a94a3eded829582b3fecf6"}
+```
