@@ -1,6 +1,4 @@
 import sys
-import operator
-import time
 import random
 import datetime
 import requests
@@ -17,7 +15,7 @@ merchant_code = config.get('merchant','merchant_code')
 base_endpoint =  config.get('environment','base_endpoint') 
 
 
-# generate html page containing payment form
+# generate request
 def generate_request(amount, currency, reference, customer_id, timestamp):
     endpoint = base_endpoint + "/payments"
     headers = {'Content-type': 'application/json', 'apikey': apikey}
